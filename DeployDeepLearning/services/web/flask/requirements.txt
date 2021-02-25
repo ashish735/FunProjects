@@ -1,7 +1,7 @@
 Flask>=1.1.2
 Flask-Bootstrap>=3.3.7.1
 waitress>=1.4.3
-tensorflow-cpu==2.1.0
+tensorflow-cpu==2.4.0
 numpy>=1.18.3
 requests>=2.23.0
 Pillow==7.1.0
