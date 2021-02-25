@@ -1,0 +1,37 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "signatureName": "eval"
+      }
+    ],
+    "slicingSpecs": [
+      {},
+      {
+        "featureKeys": [
+          "trip_start_hour"
+        ]
+      }
+    ],
+    "metricsSpecs": [
+      {
+        "modelNames": [
+          ""
+        ],
+        "thresholds": {
+          "accuracy": {
+            "valueThreshold": {
+              "lowerBound": 0.6
+            }
+          }
+        }
+      }
+    ]
+  },
+  "version": "0.27.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "/root/tfx/pipelines/chicago_taxi_simple/Trainer/model/7/eval_model_dir"
+  }
+}
