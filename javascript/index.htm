@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type ="text/css">
+    .circle {
+        width:200px;
+        height:200px;
+        border-radius: 50%;
+        float:left;
+        margin:50px;
+    }
+
+    #red-circle {
+        background-color: red;
+    }
+
+    #blue-circle {
+        background-color: blue;
+    }
+
+    #yellow-circle {
+        background-color: yellow;
+    }
+
+    </style>
+   
+</head>
+<body>
+    <p id="text">Hello World! Hero</p>
+    <button id="button">Change text</button>
+    
+    <p id="para"> Javascript is </p>
+    <button id="append">Append Text</button>
+    
+    <p id="emptypara"></p>
+    <button id="empty">Magic</button>
+    
+    <p id="moretext">This is some text</p>
+    <button id="styletext">Style Text</button>
+
+    <button onclick="alert('Hi')">Click Me as much you want</button> <!--onclick event for button-->
+    
+    <div class="circle" id="red-circle"></div>
+    <div class="circle" id="blue-circle"></div>
+    <div class="circle" id="yellow-circle"></div>
+
+    <input type="text" id="textInput">
+    <button id="textchanger">Change the text</button>
+
+    <p id="changeMe">This is some text</p>
+
+    <p>What is the magic word</p>
+    <p><input type="text" id="magicWord"></p>
+    <p><button id="checkMagic">Enter</button></p>
+
+    <p>How many fingers I am holding</p>
+
+    <p><input type="text" id="guess"><button id="checkGuess">Guess</button></p>
+
+    <div id="tweetDiv"></div>
+    <script type ="text/javascript">
+   // alert('Page is Loaded again');  // semicolon is optional and script like this run as soon as the
+                                            // page gets loaded
+        
+document.getElementById("text").innerHTML = "Ashish Hero you are"; // id is defined at line no 7 and this run
+                // above run as soon as page starts
+       
+            // below function change the text on click
+            document.getElementById("button").onclick = function() 
+            {
+            document.getElementById("text").innerHTML = "Hello Akash";
+            }
+
+        // below function append the text
+    document.getElementById("append").onclick = function ()
+    {
+        document.getElementById("para").innerHTML = " I think" +document.getElementById("para").innerHTML + "Awesome";
+    }
+
+    document.getElementById("empty").onclick = function ()
+    {
+        document.getElementById("emptypara").innerHTML = "<h1>Did not see me coming</h1>";
+    }
+
+        // below function change the style of the font
+    document.getElementById("styletext").onclick = function ()
+    {
+        document.getElementById("moretext").style.color ="red";
+    }
+
+    // below function will disappear the red circle
+    document.getElementById("red-circle").onclick = function ()
+    {
+        document.getElementById("red-circle").style.display = "none";
+    }
+
+    // below function will disapper the yellow circle
+    document.getElementById("yellow-circle").onclick = function ()
+    {
+        document.getElementById("yellow-circle").style.display = "None";
+    }
+
+    var x = 5;
+    //alert(x)
+
+    // below function takes input from user and change it in the html page
+    document.getElementById("textchanger").onclick = function () 
+    {
+        var textEntered = ""
+        textEntered = document.getElementById("textInput").value;
+        document.getElementById("changeMe").innerHTML = textEntered;
+    }
+
+    var MyArray = new Array();
+    MyArray[0]="pizza";
+    MyArray[1]="choclate";
+    console.log(MyArray); // it will store the values in the console which you can check for debug
+    var tweets = ["first tweet", "second tweet"];
+    tweets.push("third tweet");
+    console.log(tweets);
+    tweets.splice(1,1); // first 1 gives position to delete and upto which position to delete
+    console.log(tweets);
+
+    /*var x = 2;
+    if (x == 1)
+    {
+        alert("x is 1")
+    }
+    else {
+        alert("x is not 1")
+    } */
+
+    document.getElementById("checkMagic").onclick = function() 
+    {
+        var magicwordEntered = document.getElementById("magicWord").value;
+        var actualMagic = "abracadabra";
+        if (magicwordEntered==actualMagic)
+        {
+            alert("You got it");
+        }
+        else{
+            alert("Nope try again");
+        }
+    }
+
+    document.getElementById("checkGuess").onclick = function()
+    {
+        var random = Math.random();
+        random = random * 6;
+        random = Math.floor(random);
+
+        if(document.getElementById("guess").value == random)
+        {
+            alert("Well done you got it");
+        }
+        else{
+            alert("Nope the number was "+random);
+        }
+    }
+
+    var tweetString ="Hero";
+    var tweets = ["first commit", "Second commit", "Third commit"];
+    for(var i=0; i < tweets.length; i++)
+    {
+        tweetString= tweetString + "<p>" + tweets[i] + "</p>";
+    }
+    document.getElementById("tweetDiv").innerHTML=tweetString;
+    var j=0;
+ /*   while( j <2)
+    {
+        alert("hello"+j);
+        j++;
+    }
+    */
+    function alertMe()
+    {
+        alert("Hi there Ashish");
+    }
+    alertMe()
+
+    function average(a, b)
+    {
+        return ((a +b)/2);
+    }
+    var x =5;
+    var y =10;
+    alert(average(x,y));
+</script>                 
+</body>
+</html>

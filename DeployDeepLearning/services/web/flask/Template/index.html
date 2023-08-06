@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head><style>.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}</style></head>
+ <div class="container">
+   <h1>Upload File Here</h1>
+   <hr>
+   <img src="{{ result.image_path }}" class="img-rounded" width="400" height="200">
+   <form class="form-inline" action="/app" method="post" enctype="multipart/form-data">
+     <div class="form-group">
+       <input type="file" name="file" class="btn btn-default">
+     </div>
+     <div class="form-group">
+       <input type="submit" value="Upload" class="button">
+     </div>
+   </form>
+ </div>
+
+{% endblock %}

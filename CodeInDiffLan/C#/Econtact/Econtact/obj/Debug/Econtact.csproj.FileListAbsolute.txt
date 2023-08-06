@@ -1,0 +1,10 @@
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\bin\Debug\Econtact.exe.config
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\bin\Debug\Econtact.exe
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\bin\Debug\Econtact.pdb
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.csprojAssemblyReference.cache
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.Econtact.resources
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.Properties.Resources.resources
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.csproj.GenerateResource.cache
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.csproj.CoreCompileInputs.cache
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.exe
+D:\Projects\visualStudioWorkspace\Econtact\Econtact\obj\Debug\Econtact.pdb

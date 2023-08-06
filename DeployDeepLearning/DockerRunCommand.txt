@@ -1,0 +1,32 @@
+Old Method
+First run python app.py in vscode then run any of the below two commands
+
+docker run -p 8501:8501 --name=my_model -v "D:\WatchDog\Pull_In\DeployDeepLearning\services\tensorflow-serving\my_model:/models/my_model/1" -e MODEL_NAME=my_model tensorflow/serving
+
+docker run -p 8500:8500 -p 8501:8501 --name=my_model -v "D:\WatchDog\Pull_In\DeployDeepLearning\any_input_test:/models/my_model/1" -e MODEL_NAME=my_model tensorflow/serving:1.8.0
+
+docker run -p 8501:8501 --name=pets -v "D:\FunProjects\Deploying-Deep-Learning-Models-using-TensorFlow-Serving-with-Docker-and-Flask-master\pets:/models/pets/1" -e MODEL_NAME=pets tensorflow/serving
+
+New Method
+docker-compose up
+
+Getting the IP address of docker
+docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" <container_name>
+
+To add port forwardings, I always follow these steps,
+
+    stop running container
+
+    docker stop test01
+
+    commit the container
+
+    docker commit test01 test02
+
+    NOTE: The above, test02 is a new image that I'm constructing from the test01 container.
+
+    re-run from the commited image
+
+    docker run -p 8080:8080 -td test02
+
+Where the first 8080 is the local port and the second 8080 is the container port.

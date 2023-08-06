@@ -1,0 +1,36 @@
+version: '3'
+
+services: 
+  tensorflow-serving:
+    build: 
+      context: ./services/tensorflow-serving
+      dockerfile: Dockerfile.tf   
+    #environment:  
+      #MODEL_NAME: my_model
+    command:
+      - '--model_config_file=/models/model.config'
+    #  - '--model_config_file_poll_wait_seconds=60'
+    expose: 
+      - 8500-8501
+    depends_on: 
+      - web
+  web:
+    build:
+      context: ./services/web/flask
+      dockerfile: Dockerfile.flask
+    volumes: 
+      - sql_data:/app/database
+    command: gunicorn --bind 0.0.0.0:5000 manage:flask_app
+    expose:
+      - 5000
+  nginx:
+    build: 
+      context: ./services/nginx
+      dockerfile: Dockerfile.nginx
+    ports:
+      - 1337:443
+    #ports:
+    #  - 1337:80   Not https
+
+volumes:
+  sql_data:

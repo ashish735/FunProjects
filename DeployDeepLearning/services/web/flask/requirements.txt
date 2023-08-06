@@ -1,0 +1,16 @@
+Flask==1.1.2
+Flask-Bootstrap==3.3.7.1
+waitress==1.4.3
+tensorflow-cpu==2.1.0
+numpy==1.18.3
+requests==2.23.0
+Pillow==7.1.0
+gunicorn==20.0.4
+Flask-SQLAlchemy==2.5.1
+Flask-Login==0.5.0
+pandas==1.0.5
+grpcio==1.31.0
+tensorflow-serving-api==2.1.0
+jinja2==3.0.3
+itsdangerous==2.0.1
+werkzeug==2.0.3
